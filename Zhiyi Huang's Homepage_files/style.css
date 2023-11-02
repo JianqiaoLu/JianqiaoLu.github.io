@@ -29,7 +29,7 @@ div.image {
     margin-left: 0pt;
     margin-right: 60px;
     border:2px solid rgb(77, 47, 47);
-    background-image: url("./Zhiyi Huang's Homepage_files/jianqiao.jpg") no-repeat;
+    background: url("jianqiao.jpg") no-repeat;
     background-size: 250px;
     box-shadow: 10px 10px 5px #ccc; }
 
