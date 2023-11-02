@@ -1,6 +1,6 @@
 body {   
     margin:         auto;
-    background:     #cde;
+    background:     #ffffff;
     line-height:    1.2;
     font-size:      12pt;
     font-family:    "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif; }
@@ -22,7 +22,7 @@ em.math {
 
 div.image {
     float: right;
-    width: 250px;
+    width: 180px;
     height: 250px;
     margin-top: 60px;
     margin-left: 0pt;
@@ -33,7 +33,7 @@ div.image {
     box-shadow: 10px 10px 5px #ccc; }
 
 div.container   {   width:          800px;
-                    background:     Snow;
+                    background:     #ffffff;
                     padding-left:   40px;
                     padding-right:  40px;
                     padding-top:    20px;
@@ -78,7 +78,8 @@ div.abstract    {   display:        none;
                     border:         1px solid gray;
                     font-size:      11pt;       }
 .abstract p     {   margin:         5px;        }
-ul.circle       {   list-style-type:circle;     
+ul.circle       {  background:          Snow;   
+                   list-style-type:circle;     
                     line-height:    1.4em;
                     margin-left:    -15px;      }
 li.list         {   padding-left:   10px;       }
