@@ -1,6 +1,6 @@
 body {   
     margin:         auto;
-    background:     #ffffff;
+    background:     #fff;
     line-height:    1.2;
     font-size:      12pt;
     font-family:    "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif; }
@@ -33,7 +33,7 @@ div.image {
     box-shadow: 10px 10px 5px #ccc; }
 
 div.container   {   width:          800px;
-                    background:     #ffffff;
+                    background:     #fff;
                     padding-left:   40px;
                     padding-right:  40px;
                     padding-top:    20px;
