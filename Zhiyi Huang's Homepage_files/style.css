@@ -22,13 +22,14 @@ em.math {
 
 div.image {
     float: right;
-    max-width: 100px；
-    max-height: 100px;
+    
+    height: 100px;
+    width: 100px;
     margin-top: 60px;
     margin-left: 0pt;
     margin-right: 60px;
     border:2px solid rgb(77, 47, 47);
-    background: url("./Zhiyi Huang's Homepage_files/jianqiao.jpg") no-repeat;
+    background-image: url("./Zhiyi Huang's Homepage_files/jianqiao.jpg") no-repeat;
     background-size: 250px;
     box-shadow: 10px 10px 5px #ccc; }
 
