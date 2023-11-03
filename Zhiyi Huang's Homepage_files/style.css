@@ -30,10 +30,14 @@ div.image {
     margin-left: 0pt;
     margin-right: 60px;
     border:2px solid rgb(77, 47, 47);
-    background: url("jianqiao.png") no-repeat ;
     background-size: 250px;
     box-shadow: 10px 10px 5px #ccc; }
-
+div.image img {
+        /* Style for the image */
+        width: 100%; /* makes the image fill the div */
+        height: auto; /* keeps the image aspect ratio */
+        display: block; /* prevents inline behavior which can cause unwanted space */
+      }
 div.container   {   width:          800px;
                     background:     rgb(255, 255, 255);
                     padding-left:   40px;
