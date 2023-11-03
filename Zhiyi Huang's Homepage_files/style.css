@@ -24,12 +24,13 @@ em.math {
 div.image {
     float: right;
     
-    height: 100px;
-    width: 70px;
+    height: 120px;
+    width: 80px;
     margin-top: 60px;
     margin-left: 0pt;
     margin-right: 60px;
-    border:2px solid rgb(77, 47, 47);
+    border-radius: 50%;
+    border:2px solid #fff(77, 47, 47);
     background-size: 250px;
     box-shadow: 10px 10px 5px #ccc; }
 div.image img {
@@ -37,6 +38,7 @@ div.image img {
         width: 100%; /* makes the image fill the div */
         height: auto; /* keeps the image aspect ratio */
         display: block; /* prevents inline behavior which can cause unwanted space */
+        border-radius: 50%;
       }
 div.container   {   width:          800px;
                     background:     rgb(255, 255, 255);
