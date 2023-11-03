@@ -24,12 +24,12 @@ div.image {
     float: right;
     
     height: 100px;
-    width: 100px;
+    width: 70px;
     margin-top: 60px;
     margin-left: 0pt;
     margin-right: 60px;
     border:2px solid rgb(77, 47, 47);
-    background: url("jianqiao.jpg") no-repeat;
+    background-image: url("jianqiao.jpg") ;
     background-size: 250px;
     box-shadow: 10px 10px 5px #ccc; }
 
