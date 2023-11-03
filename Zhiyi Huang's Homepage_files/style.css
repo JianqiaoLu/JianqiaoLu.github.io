@@ -20,6 +20,7 @@ em.math {
     font-family:    "Times New Roman", Times, serif;
     font-style:     normal; }
 
+
 div.image {
     float: right;
     
@@ -29,7 +30,7 @@ div.image {
     margin-left: 0pt;
     margin-right: 60px;
     border:2px solid rgb(77, 47, 47);
-    background-image: url("jianqiao.jpg") ;
+    background: url("jianqiao.png") no-repeat ;
     background-size: 250px;
     box-shadow: 10px 10px 5px #ccc; }
 
