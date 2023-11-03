@@ -40,6 +40,7 @@ div.image img {
         display: block; /* prevents inline behavior which can cause unwanted space */
         border-radius: 50%;
       }
+
 div.container   {   width:          800px;
                     background:     rgb(255, 255, 255);
                     padding-left:   40px;

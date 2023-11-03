@@ -23,6 +23,25 @@
         .emoji {
             font-size: 1.2em;
         }
+        div.image {
+            float: left;
+            height: 70px;
+            width: 100px;
+            margin-top: 0px;
+            margin-left: 10pt;
+            margin-right: 10pt;
+            /* border-radius: 50%; */
+            border:2px solid #fff(77, 47, 47);
+            background-size: 250px;
+            box-shadow: 10px 10px 5px #ccc; 
+        }
+        div.image img {
+            /* Style for the image */
+            width: 100%; /* makes the image fill the div */
+            height: auto; /* keeps the image aspect ratio */
+            display: block; /* prevents inline behavior which can cause unwanted space */
+            /* border-radius: 50%; */
+        }
     </style>
 </head>
 <body>
@@ -36,7 +55,12 @@
     <p>Maintaining a healthy balance, fitness is a core component of my daily routine. I embrace the vitality and discipline that comes with fitness, recognizing it as a cornerstone of both physical and mental well-being.</p>
 
     <h2>🥏 Frisbee Fanatic</h2>
-    <p>Beyond the digital screens and gym walls, you'll find me indulging in the dynamic world of <strong>Frisbee</strong>. It's not just a hobby—it's a way to connect, compete, and enjoy the simple pleasure of a flying disc.</p>
+    <div class="image">
+        <img src ="frisbee.png" />
+    </div>
+    <p>Away from the glow of digital displays and the confines of the gymnasium, I immerse myself in the spirited realm of <strong>Frisbee</strong>. Captured to the left is a snapshot seizing the moment of release — a frisbee in mid-flight.</p>
+
+    
 
 </body>
 </html>
