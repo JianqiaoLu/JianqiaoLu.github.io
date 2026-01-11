@@ -1,2 +1,1 @@
-magick sources/hiking.png -quality 80 sources/hiking.webp
-magick sources/running.png -quality 80 sources/running.webp
+magick compressed_selfie.png -quality 80 sources/compressed_selfie.webp
