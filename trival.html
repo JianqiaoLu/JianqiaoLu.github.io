@@ -1,117 +1,306 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- <meta charset="UTF-8"> -->
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript" async="" src="./Jianqiao Lu&#39;s Homepage_files/analytics.js"></script><script type="text/javascript" async="" src="./Jianqiao Lu&#39;s Homepage_files/js"></script><script></script>
-    <title>About Me</title>
-    <style>
-        body {
-            font-family:  "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif; 
-            line-height: 1.6;
-        }
-        h2 {
-            color: #333;
-        }
-        a {
-            text-decoration: none;
-            color: #007bff;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .emoji {
-            font-size: 1.2em;
-        }
-        div.image {
-            float: left;
-            height: 70px;
-            width: 100px;
-            margin-top: 0px;
-            margin-left: 10pt;
-            margin-right: 10pt;
-            /* border-radius: 50%; */
-            border:2px solid #fff(77, 47, 47);
-            background-size: 250px;
-            box-shadow: 10px 10px 5px #ccc; 
-        }
-        div.image img {
-            /* Style for the image */
-            width: 100%; /* makes the image fill the div */
-            height: auto; /* keeps the image aspect ratio */
-            display: block; /* prevents inline behavior which can cause unwanted space */
-            /* border-radius: 50%; */
-        }
-        div.image_lolm {
-            float: right;
-            height: 40px;
-            width: 90px;
-            margin-top: 0px;
-            margin-left: 10pt;
-            margin-right:10pt;
-            /* border-radius: 50%; */
-            border:2px solid #fff(77, 47, 47);
-            background-size: 250px;
-            box-shadow: 10px 10px 5px #ccc; 
-        }
-        div.image_lolm img {
-            /* Style for the image */
-            width: 100%; /* makes the image fill the div */
-            height: auto; /* keeps the image aspect ratio */
-            display: block; /* prevents inline behavior which can cause unwanted space */
-            /* border-radius: 50%; */
-        }
-        div.image_fitness {
-            float: right;
-            height: 100px;
-            width: 80px;
-            margin-top: 0px;
-            margin-left: 10pt;
-            margin-right: 30pt;
-            /* border-radius: 50%; */
-            border:2px solid #fff(77, 47, 47);
-            background-size: 250px;
-            box-shadow: 10px 10px 5px #ccc; 
-        }
-        div.image_fitness img {
-            /* Style for the image */
-            width: 100%; /* makes the image fill the div */
-            height: 100%; /* keeps the image aspect ratio */
-            display: block; /* prevents inline behavior which can cause unwanted space */
-            /* border-radius: 50%; */
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trivia | Jianqiao Lu</title>
+  <meta name="description" content="Trivia and personal interests of Jianqiao Lu." />
+
+  <style>
+    :root{
+      --text:#111;
+      --muted:#555;
+      --border:#e6e6e6;
+      --link:#0b5fff;
+      --bg:#ffffff;
+      --card:#fbfbfd;
+      --chip:#f5f7ff;
+      --shadow: 0 10px 24px rgba(0,0,0,0.08);
+    }
+
+    html,body{ background:var(--bg); color:var(--text); }
+    body{
+      margin:0;
+      font-family: ui-serif, "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+      line-height:1.65;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    a{ color:var(--link); text-decoration:none; }
+    a:hover{ text-decoration:underline; }
+
+    .container{
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 26px 18px 56px;
+    }
+
+    /* Top bar */
+    .top{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:12px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+    }
+
+    .top h1{
+      margin:0;
+      font-size: 34px;
+      line-height: 1.1;
+      letter-spacing: 0.2px;
+    }
+
+    .top .sub{
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: 6px;
+    }
+
+    .nav{
+      display:flex;
+      gap:12px;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* Cards */
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+
+    .card{
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+
+      /* perf: render cards only when needed (mobile-friendly) */
+      content-visibility: auto;
+      contain-intrinsic-size: 160px;
+    }
+
+    .card-inner{
+      display:flex;
+      gap:16px;
+      padding: 16px;
+      align-items: center;
+    }
+
+    .thumb{
+      width: 140px;
+      height: 100px;
+      border-radius: 16px;
+      overflow:hidden;
+      border: 1px solid var(--border);
+      background: #fff;
+      flex: 0 0 auto;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit: cover;
+      display:block;
+    }
+
+    .content h2{
+      margin: 0 0 6px;
+      font-size: 20px;
+    }
+    .content p{
+      margin: 0;
+      color: var(--text);
+    }
+
+    .meta{
+      margin-top: 10px;
+      display:flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .chip{
+      display:inline-block;
+      padding: 5px 10px;
+      border:1px solid var(--border);
+      background: var(--chip);
+      border-radius: 999px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    /* Alternate layout for fun (zig-zag) */
+    .card.alt .card-inner{ flex-direction: row-reverse; }
+
+    .caption{
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    footer{
+      margin-top: 26px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 14px;
+      display:flex;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 640px){
+      .top h1{ font-size: 28px; }
+      .card-inner{ align-items: flex-start; }
+      .thumb{ width: 110px; height: 86px; }
+    }
+  </style>
 </head>
+
 <body>
-    <h1>Interests</h1>
-
-
-    <h2>🎮 Gaming Enthusiasm</h2>
-    <div class="image_lolm" >
-        <img src ="lolm.png" />  
-        <p style="text-align: center;font-size: xx-small;">MasterTier in LoLM</p>
+  <div class="container">
+    <div class="top">
+      <div>
+        <h1>Trivia</h1>
+        <div class="sub">Things I enjoy when I’m not staring at loss curves 🙂</div>
+      </div>
+      <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="mailto:tjlujianqiao@gmail.com">Email</a>
+        <a href="https://scholar.google.com/citations?user=uIW6d6AAAAAJ&hl=zh-CN" target="_blank" rel="noopener noreferrer">Scholar</a>
+        <a href="https://github.com/rookie-joe/" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
     </div>
-    <p>In the realm of leisure, I am an avid enthusiast of the <strong>League of Legends (LoL)</strong> universe. Whether it's strategizing in the heat of play or spectating thrilling professional matches, LoL is a passion that captivates my competitive spirit.</p>
 
-    <br>
+    <div class="grid">
 
+      <!-- Gaming -->
+      <div class="card">
+        <div class="card-inner">
+          <div class="thumb" title="LoLM">
+            <img src="sources/lolm.webp" alt="LoLM" loading="lazy" decoding="async" />
+          </div>
 
+          <div class="content">
+            <h2>🎮 Gaming — League of Legends (LoL)</h2>
+            <p>
+              I enjoy the <strong>League of Legends</strong> universe—both playing and watching pro games.
+              I’m a strategy nerd at heart: drafts, tempo, and that one decisive team fight.
+            </p>
+            <div class="meta">
+              <span class="chip">LoL / LoLM</span>
+              <span class="chip">Master Tier (LoLM)</span>
+            </div>
+            <div class="caption">Master Tier in LoLM.</div>
+          </div>
+        </div>
+      </div>
 
-    <h2>💪 Fitness Commitment</h2>
-    <div class="image_fitness" >
-        <img src ="fitness.png" />  
+      <!-- Fitness -->
+      <div class="card alt">
+        <div class="card-inner">
+          <div class="thumb" title="Fitness">
+            <img src="sources/fitness.webp" alt="Fitness" loading="lazy" decoding="async" />
+          </div>
+
+          <div class="content">
+            <h2>💪 Fitness</h2>
+            <p>
+              Fitness is my “daily reset button”. It keeps me honest, improves focus,
+              and makes long debugging sessions slightly less painful.
+            </p>
+            <div class="meta">
+              <span class="chip">Consistency &gt; intensity</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Running -->
+      <div class="card">
+        <div class="card-inner">
+          <div class="thumb" title="Running">
+            <img
+              src="sources/running.webp"
+              alt="Running (optional image)"
+              loading="lazy"
+              decoding="async"
+              onerror="this.style.display='none'; this.parentElement.style.padding='10px'; this.parentElement.innerHTML='🏃‍♂️'; this.parentElement.style.fontSize='42px';"
+            />
+          </div>
+
+          <div class="content">
+            <h2>🏃 Running</h2>
+            <p>
+              A small habit I try to keep: <strong>5km daily</strong>, and at least <strong>one 10km run each week</strong>.
+              It’s less about speed, more about showing up.
+            </p>
+            <div class="meta">
+              <span class="chip">5km daily</span>
+              <span class="chip">10km weekly</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hiking (new) -->
+      <div class="card alt">
+        <div class="card-inner">
+          <div class="thumb" title="Hiking">
+            <img
+              src="sources/hiking.webp"
+              alt="Hiking (optional image)"
+              loading="lazy"
+              decoding="async"
+              onerror="this.style.display='none'; this.parentElement.style.padding='10px'; this.parentElement.innerHTML='🥾'; this.parentElement.style.fontSize='42px';"
+            />
+          </div>
+
+          <div class="content">
+            <h2>🥾 Hiking / 徒步</h2>
+            <p>
+              I like slow hikes—good views, quiet mind, and just enough sweat.
+              A simple way to reset after a busy week.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Frisbee -->
+      <div class="card">
+        <div class="card-inner">
+          <div class="thumb" title="Frisbee">
+            <img src="sources/frisbee.webp" alt="Frisbee" loading="lazy" decoding="async" />
+          </div>
+
+          <div class="content">
+            <h2>🥏 Frisbee</h2>
+            <p>
+              When I’m away from screens and gyms, I like throwing a <strong>frisbee</strong>.
+              There’s something satisfying about a clean release and a stable flight.
+            </p>
+          </div>
+        </div>
+      </div>
+
     </div>
-    <p>Maintaining a healthy balance, fitness is a core component of my daily routine. I embrace the vitality and discipline that comes with fitness, recognizing it as a cornerstone of both physical and mental well-being.</p>
 
-    <br>
-
-    <h2>🥏 Frisbee Fanatic</h2>
-    <div class="image">
-        <img src ="frisbee.png" />
-    </div>
-    <p>Away from the glow of digital displays and the confines of the gymnasium, I immerse myself in the spirited realm of <strong>Frisbee</strong>. Captured to the left is a snapshot seizing the moment of release — a frisbee in mid-flight.</p>
-
-    
-
+    <footer>
+      <div>© 2026 Jianqiao Lu</div>
+      <div><a href="index.html">Back to Home</a></div>
+    </footer>
+  </div>
 </body>
 </html>
