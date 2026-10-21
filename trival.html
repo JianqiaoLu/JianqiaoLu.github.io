@@ -4,273 +4,84 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Trivia | Jianqiao Lu</title>
-  <meta name="description" content="Trivia and personal interests of Jianqiao Lu." />
-
-  <style>
-    :root{
-      --text:#111;
-      --muted:#555;
-      --border:#e6e6e6;
-      --link:#0b5fff;
-      --bg:#ffffff;
-      --card:#fbfbfd;
-      --chip:#f5f7ff;
-      --shadow: 0 10px 24px rgba(0,0,0,0.08);
-    }
-
-    html,body{ background:var(--bg); color:var(--text); }
-    body{
-      margin:0;
-      font-family: ui-serif, "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
-      line-height:1.65;
-      -webkit-font-smoothing: antialiased;
-      text-rendering: optimizeLegibility;
-    }
-
-    a{ color:var(--link); text-decoration:none; }
-    a:hover{ text-decoration:underline; }
-
-    .container{
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 26px 18px 56px;
-    }
-
-    /* Top bar */
-    .top{
-      display:flex;
-      align-items:flex-end;
-      justify-content:space-between;
-      gap:12px;
-      padding-bottom: 14px;
-      border-bottom: 1px solid var(--border);
-      margin-bottom: 18px;
-      flex-wrap: wrap;
-    }
-
-    .top h1{
-      margin:0;
-      font-size: 34px;
-      line-height: 1.1;
-      letter-spacing: 0.2px;
-    }
-
-    .top .sub{
-      color: var(--muted);
-      font-size: 14px;
-      margin-top: 6px;
-    }
-
-    .nav{
-      display:flex;
-      gap:12px;
-      flex-wrap: wrap;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    /* Cards */
-    .grid{
-      display:grid;
-      grid-template-columns: 1fr;
-      gap: 14px;
-    }
-
-    .card{
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      box-shadow: var(--shadow);
-      overflow: hidden;
-
-      /* perf: render cards only when needed (mobile-friendly) */
-      content-visibility: auto;
-      contain-intrinsic-size: 160px;
-    }
-
-    .card-inner{
-      display:flex;
-      gap:16px;
-      padding: 16px;
-      align-items: center;
-    }
-
-    .thumb{
-      width: 140px;
-      height: 100px;
-      border-radius: 16px;
-      overflow:hidden;
-      border: 1px solid var(--border);
-      background: #fff;
-      flex: 0 0 auto;
-      box-shadow: 0 8px 18px rgba(0,0,0,0.08);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-    }
-    .thumb img{
-      width:100%;
-      height:100%;
-      object-fit: cover;
-      display:block;
-    }
-
-    .content h2{
-      margin: 0 0 6px;
-      font-size: 20px;
-    }
-    .content p{
-      margin: 0;
-      color: var(--text);
-    }
-
-    .meta{
-      margin-top: 10px;
-      display:flex;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
-    .chip{
-      display:inline-block;
-      padding: 5px 10px;
-      border:1px solid var(--border);
-      background: var(--chip);
-      border-radius: 999px;
-      font-size: 13px;
-      color: var(--muted);
-    }
-
-    /* Alternate layout for fun (zig-zag) */
-    .card.alt .card-inner{ flex-direction: row-reverse; }
-
-    .caption{
-      margin-top: 6px;
-      color: var(--muted);
-      font-size: 12px;
-    }
-
-    footer{
-      margin-top: 26px;
-      padding-top: 14px;
-      border-top: 1px solid var(--border);
-      color: var(--muted);
-      font-size: 14px;
-      display:flex;
-      justify-content: space-between;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    @media (max-width: 640px){
-      .top h1{ font-size: 28px; }
-      .card-inner{ align-items: flex-start; }
-      .thumb{ width: 110px; height: 86px; }
-    }
-  </style>
+  <meta name="description" content="Running, hiking, games, fitness, and frisbee. A little about Jianqiao Lu outside research." />
+  <link rel="canonical" href="https://jianqiaolu.github.io/trival.html" />
+  <link rel="icon" type="image/webp" href="sources/compressed_selfie.webp" />
+  <link rel="stylesheet" href="styles.css?v=20261021-run1" />
 </head>
-
 <body>
+  <a class="skip-link" href="#main">Skip to interests</a>
   <div class="container">
-    <div class="top">
+    <header class="page-header">
       <div>
         <h1>Trivia</h1>
-        <div class="sub">Things I enjoy when I’m not staring at loss curves 🙂</div>
+        <p class="page-subtitle">Things I enjoy when I’m not staring at loss curves.</p>
       </div>
-      <div class="nav">
-        <a href="index.html">Home</a>
+      <nav class="page-nav" aria-label="Profile links">
+        <a href="index.html">← Home</a>
         <a href="mailto:tjlujianqiao@gmail.com">Email</a>
-        <a href="https://scholar.google.com/citations?user=uIW6d6AAAAAJ&hl=zh-CN" target="_blank" rel="noopener noreferrer">Scholar</a>
+        <a href="https://scholar.google.com/citations?user=uIW6d6AAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Scholar</a>
         <a href="https://github.com/rookie-joe/" target="_blank" rel="noopener noreferrer">GitHub</a>
-      </div>
-    </div>
-
-    <div class=”grid”>
-
-      <!-- Running -->
-      <div class=”card”>
-        <div class=”card-inner”>
-          <div class=”content”>
-            <h2>🏃 Running</h2>
-            <p>
-              A habit I try to keep: <strong>5km daily</strong>, at least one <strong>10km</strong> each week.
-              It’s less about speed, more about showing up—though the times do creep down.
-            </p>
-            <div class=”meta”>
-              <span class=”chip”>Semi-marathon — 2:06</span>
-              <span class=”chip”>5km daily</span>
-              <span class=”chip”>10km weekly</span>
+      </nav>
+    </header>
+    <main class="trivia-list" id="main">
+      <section aria-labelledby="running-heading">
+        <h2 id="running-heading">Running</h2>
+        <p>I enjoy the consistency of running. Here’s what that looks like in the log.</p>
+        <div class="running-log">
+          <div class="running-overview">
+            <div class="running-best">
+              <p class="run-label">Half marathon · 21.1 km</p>
+              <p class="run-time" aria-label="1 hour 43 minutes">1<span>:</span>43</p>
+              <p class="run-date"><time datetime="2026-10-18">18 October 2026</time><span>Personal best · h:mm</span></p>
+            </div>
+            <div class="running-volume">
+              <p class="run-label">The miles behind the time</p>
+              <dl class="run-totals">
+                <div><dt>Kilometres</dt><dd>506.9</dd></div>
+                <div><dt>Runs logged</dt><dd>59</dd></div>
+              </dl>
+              <p class="run-period">24 August–18 October 2026<br />Eight complete weeks</p>
             </div>
           </div>
+          <figure class="run-chart" aria-labelledby="run-chart-caption">
+            <figcaption id="run-chart-caption"><span>Weekly distance</span><span>km · weeks starting</span></figcaption>
+            <ol class="run-bars">
+              <li title="Week of 24 August 2026: 58.3 km, 6 runs"><div class="run-column"><span class="run-bar" style="--bar-size: 72.8375%"><span class="run-value">58.3</span></span></div><time datetime="2026-08-24">24<span>Aug</span></time></li>
+              <li title="Week of 31 August 2026: 74.4 km, 7 runs"><div class="run-column"><span class="run-bar" style="--bar-size: 92.9875%"><span class="run-value">74.4</span></span></div><time datetime="2026-08-31">31<span>Aug</span></time></li>
+              <li title="Week of 7 September 2026: 67.0 km, 7 runs"><div class="run-column"><span class="run-bar" style="--bar-size: 83.775%"><span class="run-value">67.0</span></span></div><time datetime="2026-09-07">7<span>Sep</span></time></li>
+              <li title="Week of 14 September 2026: 63.0 km, 9 runs"><div class="run-column"><span class="run-bar" style="--bar-size: 78.8%"><span class="run-value">63.0</span></span></div><time datetime="2026-09-14">14<span>Sep</span></time></li>
+              <li title="Week of 21 September 2026: 62.0 km, 8 runs"><div class="run-column"><span class="run-bar" style="--bar-size: 77.55%"><span class="run-value">62.0</span></span></div><time datetime="2026-09-21">21<span>Sep</span></time></li>
+              <li title="Week of 28 September 2026: 55.7 km, 5 runs"><div class="run-column"><span class="run-bar" style="--bar-size: 69.5625%"><span class="run-value">55.7</span></span></div><time datetime="2026-09-28">28<span>Sep</span></time></li>
+              <li title="Week of 5 October 2026: 64.1 km, 11 runs"><div class="run-column"><span class="run-bar" style="--bar-size: 80.15%"><span class="run-value">64.1</span></span></div><time datetime="2026-10-05">5<span>Oct</span></time></li>
+              <li title="Week of 12 October 2026: 62.3 km, 6 runs"><div class="run-column"><span class="run-bar" style="--bar-size: 77.9125%"><span class="run-value">62.3</span></span></div><time datetime="2026-10-12">12<span>Oct</span></time></li>
+            </ol>
+          </figure>
+          <p class="running-source">Garmin &amp; Strava · Snapshot <time datetime="2026-10-21">21 October 2026</time></p>
         </div>
-      </div>
-
-      <!-- Hiking -->
-      <div class=”card alt”>
-        <div class=”card-inner”>
-          <div class=”content”>
-            <h2>🥾 Hiking / 徒步</h2>
-            <p>
-              Good views, quiet mind, just enough sweat. A reliable way to reset after a long week.
-              Best effort on the Three Peaks traverse in Beijing so far.
-            </p>
-            <div class=”meta”>
-              <span class=”chip”>Three Peaks, Beijing — 7h</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Gaming -->
-      <div class=”card”>
-        <div class=”card-inner”>
-          <div class=”content”>
-            <h2>🎮 Gaming — League of Legends (LoL)</h2>
-            <p>
-              I enjoy the <strong>League of Legends</strong> universe—both playing and watching pro games.
-              Strategy nerd at heart: drafts, tempo, and that one decisive team fight.
-            </p>
-            <div class=”meta”>
-              <span class=”chip”>LoL / LoLM</span>
-              <span class=”chip”>Master Tier (LoLM)</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Fitness -->
-      <div class=”card alt”>
-        <div class=”card-inner”>
-          <div class=”content”>
-            <h2>💪 Fitness</h2>
-            <p>
-              My daily reset button. Keeps me honest, improves focus,
-              and makes long debugging sessions slightly less painful.
-            </p>
-            <div class=”meta”>
-              <span class=”chip”>Consistency &gt; intensity</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Frisbee -->
-      <div class=”card”>
-        <div class=”card-inner”>
-          <div class=”content”>
-            <h2>🥏 Frisbee</h2>
-            <p>
-              When I’m away from screens and gyms, I like throwing a <strong>frisbee</strong>.
-              Something satisfying about a clean release and a stable flight.
-            </p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
+      </section>
+      <section aria-labelledby="hiking-heading">
+        <h2 id="hiking-heading">Hiking <span lang="zh">/ 徒步</span></h2>
+        <p>Good views, a quiet mind, and just enough sweat. A reliable way to reset after a long week.</p>
+        <p class="personal-record">Three Peaks, Beijing — <strong>7h</strong></p>
+      </section>
+      <section aria-labelledby="gaming-heading">
+        <h2 id="gaming-heading">Gaming</h2>
+        <p>I enjoy League of Legends, both playing and watching professional matches. Drafts, tempo, and that one decisive team fight.</p>
+        <p class="personal-record">Master Tier in LoLM</p>
+      </section>
+      <section aria-labelledby="fitness-heading">
+        <h2 id="fitness-heading">Fitness</h2>
+        <p>My reset button. It keeps me focused and makes long debugging sessions a little less painful. Consistency over intensity.</p>
+      </section>
+      <section aria-labelledby="frisbee-heading">
+        <h2 id="frisbee-heading">Frisbee</h2>
+        <p>When I’m away from screens and gyms, I like throwing a frisbee. There’s something satisfying about a clean release and a stable flight.</p>
+      </section>
+    </main>
     <footer>
-      <div>© 2026 Jianqiao Lu</div>
-      <div><a href="index.html">Back to Home</a></div>
+      <span>© 2026 Jianqiao Lu</span>
+      <a href="index.html">Back to home ↑</a>
     </footer>
   </div>
 </body>

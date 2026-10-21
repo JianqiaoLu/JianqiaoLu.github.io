@@ -4,287 +4,167 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jianqiao Lu | 陆剑桥</title>
-  <meta name="description" content="Jianqiao Lu (陆剑桥) — Research Engineer at ByteDance Seed Foundation Model. Focus: scaling & efficiency, long-context training/inference." />
-  <style>
-    :root {
-      --text: #111;
-      --muted: #555;
-      --border: #e6e6e6;
-      --link: #0b5fff;
-      --bg: #ffffff;
-      --chip: #f5f7ff;
-    }
-    html, body { background: var(--bg); color: var(--text); }
-    body {
-      margin: 0;
-      font-family: ui-serif, "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
-      line-height: 1.65;
-      -webkit-font-smoothing: antialiased;
-      text-rendering: optimizeLegibility;
-    }
-    a { color: var(--link); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
-    .container {
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 28px 18px 48px;
-    }
-
-    header {
-      display: flex;
-      gap: 18px;
-      align-items: center;
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 18px;
-      margin-bottom: 20px;
-    }
-
-    .avatar {
-      width: 108px;
-      height: 108px;
-      border-radius: 999px;
-      overflow: hidden;
-      flex: 0 0 auto;
-      border: 1px solid var(--border);
-      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-    }
-    .avatar img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .title h1 {
-      margin: 0;
-      font-size: 34px;
-      line-height: 1.2;
-      letter-spacing: 0.2px;
-    }
-    .title .subtitle {
-      margin-top: 6px;
-      color: var(--muted);
-      font-size: 16px;
-    }
-
-    .chips {
-      margin-top: 10px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-    .chip {
-      display: inline-block;
-      padding: 5px 10px;
-      border: 1px solid var(--border);
-      background: var(--chip);
-      border-radius: 999px;
-      font-size: 13px;
-      color: var(--muted);
-    }
-
-    nav {
-      margin-top: 10px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px 14px;
-      font-size: 14px;
-      color: var(--muted);
-    }
-    nav a { white-space: nowrap; }
-
-    section { margin-top: 22px; }
-    section h2 {
-      margin: 0 0 10px;
-      font-size: 22px;
-    }
-    section h3 {
-      margin: 14px 0 6px;
-      font-size: 18px;
-      color: var(--text);
-    }
-
-    .note {
-      color: var(--muted);
-      font-size: 14px;
-      border-left: 3px solid var(--border);
-      padding: 6px 10px;
-      margin: 10px 0 0;
-    }
-
-    /* legacy lists from the old page */
-    ul.circle {
-      margin: 10px 0 0 22px;
-      padding: 0;
-    }
-    ul.circle li {
-      margin: 8px 0;
-    }
-
-    footer {
-      margin-top: 30px;
-      padding-top: 14px;
-      border-top: 1px solid var(--border);
-      color: var(--muted);
-      font-size: 14px;
-      display: flex;
-      justify-content: space-between;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    @media (max-width: 640px) {
-      header { align-items: flex-start; }
-      .avatar { width: 92px; height: 92px; }
-      .title h1 { font-size: 28px; }
-    }
-  </style>
+  <meta name="description" content="Jianqiao Lu (陆剑桥), Research Engineer at ByteDance Seed. Research on scaling, training efficiency, long context, and language model reasoning. Selected work: FlexPrefill, FormalAlign, and AutoPSV." />
+  <link rel="canonical" href="https://jianqiaolu.github.io/" />
+  <link rel="icon" type="image/webp" href="sources/compressed_selfie.webp" />
+  <link rel="stylesheet" href="styles.css?v=20261021-run1" />
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to research</a>
   <div class="container">
-
-    <header>
-      <div class="avatar-col">
-        <div class="avatar">
-          <img src="sources/compressed_selfie.webp" alt="Jianqiao Lu portrait" />
-        </div>
-        <p class="motto">Better wrong than idle.</p>
-      </div>
-      <div class="title">
-        <h1>Jianqiao Lu &nbsp; 陆剑桥</h1>
-        <div class="subtitle">
-          ByteDance Seed Foundation Model · Scaling & Efficiency · Long Context
-        </div>
-
-        <nav>
-          <a href="mailto:tjlujianqiao@gmail.com">Email</a>
-          <a href="trival.html">Trivia</a>
-          <a href="https://scholar.google.com/citations?user=uIW6d6AAAAAJ&hl=zh-CN" target="_blank" rel="noopener noreferrer">
-            Google Scholar
-          </a>
+    <header class="profile" id="about">
+      <figure class="portrait">
+        <img src="sources/compressed_selfie.webp" alt="Jianqiao Lu" width="108" height="108" />
+        <figcaption class="motto">Better wrong than idle.</figcaption>
+      </figure>
+      <div>
+        <h1>Jianqiao Lu <span class="chinese-name" lang="zh">陆剑桥</span></h1>
+        <p class="role"><span class="role-title">Research Engineer</span><span class="role-divider" aria-hidden="true"> · </span><span class="affiliation">ByteDance Seed Foundation Model</span></p>
+        <p class="intro">I work on large-scale foundation model pretraining, with a focus on <strong>scaling and efficiency</strong> and <strong>long-context training and inference</strong>.</p>
+        <nav class="profile-links" aria-label="Profile links">
+          <a href="mailto:tjlujianqiao@gmail.com" id="contact">Email</a>
+          <a href="https://scholar.google.com/citations?user=uIW6d6AAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
           <a href="https://github.com/rookie-joe/" target="_blank" rel="noopener noreferrer">GitHub</a>
           <a href="CV_Jianqiao_Lu.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+          <a href="trival.html" class="secondary-link">Trivia <span aria-hidden="true">↗</span></a>
         </nav>
-        
-
-        <div class="chips">
-          <span class="chip">Now: ByteDance Seed</span>
-          <span class="chip">Previously: PhD @ HKU</span>
-          <span class="chip">Focus: Training/Inference Efficiency</span>
-        </div>
       </div>
     </header>
-
-    <section id="about">
-      <h2>About</h2>
-      <p>
-        I am a <strong>Research Engineer</strong> at <strong>ByteDance Seed Foundation Model</strong>, contributing to large-scale
-        foundation model pretraining. My current focus is <strong>scaling and efficiency</strong>—especially training stability,
-        throughput/cost, and <strong>long-context</strong> training &amp; inference efficiency.
-      </p>
-
-      <h3>Interests</h3>
-      <ul class="circle">
-        <li><strong>Scaling &amp; efficiency:</strong> training stability, throughput, and cost.</li>
-        <li><strong>Long context:</strong> efficient training and inference/prefill for long sequences.</li>
-        <li><strong>Systems &amp; architecture:</strong> practical optimizations that improve stability and efficiency at scale.</li>
-
-      </ul>
-
-
-      <h3>Previously</h3>
-      <p>
-        I was a PhD student supervised by
-        <a href="https://i.cs.hku.hk/~zhiyi/index.html">Prof. Zhiyi Huang</a>
-        at The University of Hong Kong (HKU).
-      </p>
-</section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <ul class="circle">
-        <li><b>Email:</b> <a href="mailto:tjlujianqiao@gmail.com">tjlujianqiao@gmail.com</a></li>
-      </ul>
-    </section>
-
-    <section id="collaboration">
-      <h2>Collaboration</h2>
-      <p>
-        During my PhD, I worked closely with
-        <a href="https://cartus.github.io/">Dr. Zhijiang Guo</a>,
-        Dr. Zhengying Liu,
-        <a href="https://eleanor-h.github.io/">Dr. Yinya Huang</a>,
-        and <a href="https://yingjia.one/">Yingjia Wan</a>
-        on formal and informal mathematical reasoning for large language models —
-        covering autoformalization, theorem proving, and process-supervised verification.
-      </p>
-    </section>
-
-    <section id="news">
-      <h2>News</h2>
-      <ul class="circle">
-        <li>
-          <b>Sep. 2024:&nbsp;</b> (First Author)
-          <i><a href="https://arxiv.org/abs/2405.16802">AutoPSV: Automated Process-Supervised Verifier</a></i>,
-          accepted to <b>NeurIPS 2024.</b>
-        </li>
-        <li>
-          <b>Sep. 2024:&nbsp;</b>
-          <i><a href="https://arxiv.org/abs/2405.14414">Proving Theorems Recursively</a></i>,
-          accepted to <b>NeurIPS 2024.</b>
-        </li>
-        <li>
-          <b>Sep. 2024:&nbsp;</b>
-          <i><a href="https://arxiv.org/abs/2406.13975">Mr.Bean: A Comprehensive Meta-Reasoning Benchmark for Analyzing Large Language Models</a></i>,
-          accepted to <b>NeurIPS 2024.</b>
-        </li>
-        <li>
-          <b>Sep. 2024:&nbsp;</b>
-          <i><a href="https://arxiv.org/abs/2406.14408">FVEL: Interactive Formal Verification Environment with Large Language Models via Theorem Proving</a></i>,
-          accepted to <b>NeurIPS 2024 (Datasets and Benchmarks Track).</b>
-          <a href="https://fveler.github.io/" target="_blank" rel="noopener noreferrer">[Project]</a>
-        </li>
-        <li>
-          <b>Sep. 2024:&nbsp;</b>
-          <i><a href="https://arxiv.org/abs/2410.06868">Online Matching Meets Sampling Without Replacement</a></i>,
-          accepted to <b>WINE 2024.</b>
-        </li>
-        <li>
-          <b>May 2024:&nbsp;</b>
-          <i><a href="https://arxiv.org/pdf/2401.17167.pdf">Planning, Creation, Usage: Benchmarking LLMs for Comprehensive Tool Utilization in Real-World Complex Scenarios</a></i>,
-          accepted to <b>ACL 2024.</b>
-          <a href="https://github.com/JoeYing1019/UltraTool" target="_blank" rel="noopener noreferrer">[Code]</a>
-        </li>
-        <li>
-          <b>Oct. 2023:&nbsp;</b> (First Author)
-          <i><a href="https://arxiv.org/abs/2310.05374">Improving End-to-End Speech Processing by Efficient Text Data Utilization with Latent Synthesis</a></i>,
-          accepted to <b>EMNLP 2023.</b>
-        </li>
-      </ul>
-    </section>
-
-    <section id="preprint">
-      <h2>Preprint</h2>
-      <h3>Large Language Models</h3>
-      <ul class="circle">
-        <li><b>Jun. 2024:&nbsp;</b> (First Author) <i><a href="https://arxiv.org/abs/2410.10135">FormalAlign: Automated Alignment Evaluation in Autoformalization</a></i>, arXiv.</li>
-        <li><b>May 2024:&nbsp;</b> (First Author) <i><a href="https://arxiv.org/abs/2406.01940">Process-Driven Autoformalization in Lean 4</a></i>, arXiv.</li>
-        <li><b>Jan. 2024:&nbsp;</b> (Equal Contribution) <i><a href="https://arxiv.org/abs/2405.11430">MHPP: Exploring the Capabilities and Limitations of Language Models Beyond Basic Code Generation</a></i>, arXiv.</li>
-        <li><b>Jan. 2024:&nbsp;</b> (First Author) <i><a href="https://arxiv.org/abs/2401.15670">YODA: Teacher-Student Progressive Learning for Language Models</a></i>, arXiv.</li>
-        <li><b>Oct. 2023:&nbsp;</b> (First Author) <i><a href="https://arxiv.org/abs/2310.00533">SELF: Self-Evolution with Language Feedback</a></i>, arXiv.</li>
-      </ul>
-    </section>
-
-        <footer>
-      <div>© 2026 Jianqiao Lu</div>
-      <div>
-        <a href="#about">About</a> ·
-        <a href="#news">News</a> ·
-        <a href="#preprint">Preprint</a>
-      </div>
+    <main id="main">
+      <section id="selected-work" aria-labelledby="selected-heading">
+        <div class="section-heading">
+          <h2 id="selected-heading">Selected work</h2>
+          <a href="#publications">All publications <span aria-hidden="true">↓</span></a>
+        </div>
+        <article class="selected-paper" id="flexprefill">
+          <div class="paper-meta">
+            <span class="venue">ICLR 2025</span>
+            <span class="distinction">Oral</span>
+            <span class="topic">Efficient long context</span>
+          </div>
+          <div class="paper-body">
+            <h3><a href="https://arxiv.org/abs/2502.20766">FlexPrefill: A Context-Aware Sparse Attention Mechanism for Efficient Long-Sequence Inference</a></h3>
+            <p class="authors">Xunhao Lai<sup>*</sup>, <strong>Jianqiao Lu<sup>*</sup></strong>, Yao Luo, Yiyuan Ma, Xun Zhou</p>
+            <p class="contribution">Speeds up long-context prefill by adapting sparse attention patterns and compute budgets to each input and attention head.</p>
+            <div class="paper-links">
+              <a href="https://arxiv.org/abs/2502.20766">Paper</a>
+              <a href="https://github.com/ByteDance-Seed/FlexPrefill">Code</a>
+              <a href="https://seed.bytedance.com/en/public_papers/flexprefill-a-context-aware-sparse-attention-mechanism-for-efficient-long-sequence-inference">Project</a>
+            </div>
+          </div>
+        </article>
+        <article class="selected-paper" id="formalalign">
+          <div class="paper-meta">
+            <span class="venue">ICLR 2025</span>
+            <span class="topic">Formal reasoning</span>
+          </div>
+          <div class="paper-body">
+            <h3><a href="https://proceedings.iclr.cc/paper_files/paper/2025/hash/fceedf8c9c0ff51f41b9fe0294ef0070-Abstract-Conference.html">FormalAlign: Automated Alignment Evaluation for Autoformalization</a></h3>
+            <p class="authors"><strong>Jianqiao Lu<sup>*</sup></strong>, Yingjia Wan<sup>*</sup>, Yinya Huang, Jing Xiong, Zhengying Liu, Zhijiang Guo</p>
+            <p class="contribution">Checks whether formalized mathematical statements preserve their natural-language meaning, reducing the need for manual alignment checks.</p>
+            <div class="paper-links">
+              <a href="https://proceedings.iclr.cc/paper_files/paper/2025/hash/fceedf8c9c0ff51f41b9fe0294ef0070-Abstract-Conference.html">Paper</a>
+              <a href="https://github.com/rookie-joe/FormalAlign">Code &amp; data</a>
+            </div>
+          </div>
+        </article>
+        <article class="selected-paper" id="autopsv">
+          <div class="paper-meta">
+            <span class="venue">NeurIPS 2024</span>
+            <span class="topic">Process supervision</span>
+          </div>
+          <div class="paper-body">
+            <h3><a href="https://proceedings.neurips.cc/paper_files/paper/2024/hash/9246aa822579d9b29a140ecdac36ad60-Abstract-Conference.html">AutoPSV: Automated Process-Supervised Verifier</a></h3>
+            <p class="authors"><strong>Jianqiao Lu</strong>, Zhiyang Dou, Hongru Wang, Zeyu Cao, Jianbo Dai, Yingjia Wan, Yunlong Feng, Zhijiang Guo</p>
+            <p class="contribution">Turns changes in a verifier’s confidence into automatic step-level supervision for detecting reasoning errors and selecting better answers.</p>
+            <div class="paper-links">
+              <a href="https://proceedings.neurips.cc/paper_files/paper/2024/hash/9246aa822579d9b29a140ecdac36ad60-Abstract-Conference.html">Paper</a>
+              <a href="https://github.com/rookie-joe/AutoPSV">Repository</a>
+            </div>
+          </div>
+        </article>
+        <p class="equal-note"><sup>*</sup> Equal contribution.</p>
+      </section>
+      <section id="research" aria-labelledby="research-heading">
+        <h2 id="research-heading">Current research</h2>
+        <div class="research-grid">
+          <div>
+            <h3>Architecture and scaling</h3>
+            <p>I study how architecture and training objectives shape scaling, with an interest in learning efficiency at matched compute, training stability, and whether gains persist as models grow.</p>
+          </div>
+          <div>
+            <h3>Long-context efficiency</h3>
+            <p>I explore sparse attention, memory compression, and reuse across layers to reduce prefill, decoding, and memory costs. The key question is how much useful context these designs preserve.</p>
+          </div>
+          <div>
+            <h3>Models and systems</h3>
+            <p>I connect model design with execution, focusing on consistency between training and inference, numerical correctness, and whether computational savings translate into better throughput and latency under realistic workloads.</p>
+          </div>
+        </div>
+      </section>
+      <section class="publications" id="publications" aria-labelledby="publications-heading">
+        <div class="section-heading">
+          <h2 id="publications-heading">Publications</h2>
+          <a href="https://scholar.google.com/citations?user=uIW6d6AAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="publication-group" id="news">
+          <h3>2025</h3>
+          <ul class="publication-list">
+            <li><a href="https://arxiv.org/abs/2502.20766">FlexPrefill: A Context-Aware Sparse Attention Mechanism for Efficient Long-Sequence Inference</a><span class="publication-detail">ICLR 2025 · Oral · Equal contribution <a href="https://github.com/ByteDance-Seed/FlexPrefill">Code</a></span></li>
+            <li><a href="https://proceedings.iclr.cc/paper_files/paper/2025/hash/fceedf8c9c0ff51f41b9fe0294ef0070-Abstract-Conference.html">FormalAlign: Automated Alignment Evaluation for Autoformalization</a><span class="publication-detail">ICLR 2025 · Equal contribution <a href="https://github.com/rookie-joe/FormalAlign">Code &amp; data</a></span></li>
+            <li><a href="https://aclanthology.org/2025.findings-emnlp.1295/">FaStFact: Faster, Stronger Long-Form Factuality Evaluations in LLMs</a><span class="publication-detail">Findings of EMNLP 2025 <a href="https://github.com/Yingjia-Wan/FastFact">Code</a></span></li>
+          </ul>
+        </div>
+        <div class="publication-group">
+          <h3>2024</h3>
+          <ul class="publication-list">
+            <li><a href="https://proceedings.neurips.cc/paper_files/paper/2024/hash/9246aa822579d9b29a140ecdac36ad60-Abstract-Conference.html">AutoPSV: Automated Process-Supervised Verifier</a><span class="publication-detail">NeurIPS 2024 · First author <a href="https://github.com/rookie-joe/AutoPSV">Repository</a></span></li>
+            <li><a href="https://arxiv.org/abs/2405.14414">Proving Theorems Recursively</a><span class="publication-detail">NeurIPS 2024</span></li>
+            <li><a href="https://proceedings.neurips.cc/paper_files/paper/2024/hash/d81cb1f4dc6e13aeb45553f80b3d6837-Abstract-Conference.html">MR-Ben: A Meta-Reasoning Benchmark for Evaluating System-2 Thinking in LLMs</a><span class="publication-detail">NeurIPS 2024</span></li>
+            <li><a href="https://arxiv.org/abs/2406.14408">FVEL: Interactive Formal Verification Environment with Large Language Models via Theorem Proving</a><span class="publication-detail">NeurIPS 2024 · Datasets and Benchmarks Track <a href="https://fveler.github.io/">Project</a></span></li>
+            <li><a href="https://arxiv.org/abs/2410.06868">Online Matching Meets Sampling Without Replacement</a><span class="publication-detail">WINE 2024 · Equal contribution</span></li>
+            <li><a href="https://arxiv.org/abs/2401.17167">Planning, Creation, Usage: Benchmarking LLMs for Comprehensive Tool Utilization in Real-World Complex Scenarios</a><span class="publication-detail">ACL 2024 <a href="https://github.com/JoeYing1019/UltraTool">Code</a></span></li>
+          </ul>
+        </div>
+        <div class="publication-group">
+          <h3>2023</h3>
+          <ul class="publication-list">
+            <li><a href="https://arxiv.org/abs/2310.05374">Improving End-to-End Speech Processing by Efficient Text Data Utilization with Latent Synthesis</a><span class="publication-detail">EMNLP 2023 · First author</span></li>
+          </ul>
+        </div>
+        <details class="preprints" id="preprint" open>
+          <summary>Preprints <span class="section-note">(4)</span></summary>
+          <ul class="publication-list">
+            <li><a href="https://arxiv.org/abs/2406.01940">Process-Driven Autoformalization in Lean 4</a><span class="publication-detail">arXiv · 2024 · First author <a href="https://github.com/rookie-joe/PDA">Code &amp; data</a></span></li>
+            <li><a href="https://arxiv.org/abs/2405.11430">MHPP: Exploring the Capabilities and Limitations of Language Models Beyond Basic Code Generation</a><span class="publication-detail">arXiv · 2024 · Equal contribution</span></li>
+            <li><a href="https://arxiv.org/abs/2401.15670">YODA: Teacher-Student Progressive Learning for Language Models</a><span class="publication-detail">arXiv · 2024 · First author</span></li>
+            <li><a href="https://arxiv.org/abs/2310.00533">SELF: Self-Evolution with Language Feedback</a><span class="publication-detail">arXiv · 2023 · First author</span></li>
+          </ul>
+        </details>
+      </section>
+      <section class="background" id="background" aria-labelledby="background-heading">
+        <h2 id="background-heading">Background</h2>
+        <div class="background-grid">
+          <div>
+            <h3>Research experience</h3>
+            <ul class="experience-list">
+              <li><strong>ByteDance Seed Foundation Model</strong><span>Research Engineer · 2025–present</span><span>Previously Research Intern · 2024–2025</span></li>
+              <li><strong>Huawei Noah’s Ark Lab</strong><span>Research Intern · 2022–2024</span></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Education and collaboration</h3>
+            <p>PhD in Computer Science, <strong>The University of Hong Kong</strong> (2020–2025), supervised by <a href="https://i.cs.hku.hk/~zhiyi/index.html">Prof. Zhiyi Huang</a>. Bachelor’s in Electronics, <strong>Tongji University</strong> (2015–2020).</p>
+            <p id="collaboration">During my PhD, I worked with <a href="https://cartus.github.io/">Zhijiang Guo</a>, Zhengying Liu, <a href="https://eleanor-h.github.io/">Yinya Huang</a>, and <a href="https://yingjia.one/">Yingjia Wan</a> on mathematical reasoning, autoformalization, and process supervision.</p>
+          </div>
+        </div>
+        <p class="outside">Away from research, I enjoy running, hiking, games, and frisbee. <a href="trival.html">A little more about me <span aria-hidden="true">→</span></a></p>
+      </section>
+    </main>
+    <footer>
+      <span>© 2026 Jianqiao Lu · Updated October 2026</span>
+      <span><a href="#selected-work">Selected work</a> · <a href="#research">Research</a> · <a href="#publications">Publications</a> · <a href="#about">Back to top ↑</a></span>
     </footer>
-
   </div>
 </body>
 </html>
